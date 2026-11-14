@@ -1,0 +1,92 @@
+$ErrorActionPreference = "Stop"
+
+$ServerUrl = "http://127.0.0.1:8787/validate"
+$ExpectedHash = "5D753D59BD2C0110E2173F274F51BE1DEC3E9C0FDFD039AB76EF84F0B3D99532"
+
+function Get-LocalHwid {
+    $machineGuid = (Get-ItemProperty -LiteralPath "HKLM:\SOFTWARE\Microsoft\Cryptography" -Name MachineGuid).MachineGuid
+    if ([string]::IsNullOrWhiteSpace($machineGuid)) {
+        throw "Windows MachineGuid was not found."
+    }
+
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($machineGuid)
+        return ([BitConverter]::ToString($sha.ComputeHash($bytes))).Replace("-", "").ToLowerInvariant()
+    }
+    finally {
+        $sha.Dispose()
+    }
+}
+
+Write-Host "Clarity catcher" -ForegroundColor Yellow
+Write-Host "Checking license..." -ForegroundColor Yellow
+
+try {
+    $hwid = Get-LocalHwid
+    $licenseKey = Read-Host "Enter your license key"
+
+    $result = Invoke-RestMethod `
+        -Uri $ServerUrl `
+        -Method Post `
+        -ContentType "application/json" `
+        -Body (@{ key = $licenseKey; hwid = $hwid } | ConvertTo-Json -Compress) `
+        -TimeoutSec 5
+
+    if (-not $result.valid) {
+        throw "License validation failed."
+    }
+
+    Write-Host "License accepted." -ForegroundColor Green
+}
+catch {
+    Write-Host "..." -ForegroundColor Red
+    exit 1
+}
+
+$Folder = Join-Path $env:USERPROFILE "Documents\LemansUltimate setups"
+$SearchPath = @(
+    $env:USERPROFILE
+    "C:\Windows"
+    "C:\Program Files"
+    "C:\Program Files (x86)"
+)
+
+if (Test-Path -LiteralPath $Folder) {
+    Write-Host "nice clarity you got there bud!" -ForegroundColor Green
+    exit 0
+}
+else {
+    Write-Host "aw man no clarity :c" -ForegroundColor Yellow
+}
+
+Write-Host "hash!!!!!!!!!!!!!!!!!!!" -ForegroundColor Yellow
+
+foreach ($Drive in $SearchPath) {
+    if (-not (Test-Path -LiteralPath $Drive)) {
+        continue
+    }
+
+    Write-Host "`nsearching $Drive" -ForegroundColor Yellow
+    $Found = $false
+
+    Get-ChildItem -LiteralPath $Drive -File -Recurse -Force -ErrorAction SilentlyContinue |
+        ForEach-Object {
+            try {
+                $FileHash = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256 -ErrorAction Stop).Hash
+
+                if ($FileHash -eq $ExpectedHash) {
+                    $Found = $true
+                    Write-Host "`ncool guy you got here" -ForegroundColor Green
+                    Write-Host "Full path: $($_.FullName)" -ForegroundColor Cyan
+                    Write-Host "SHA256: $FileHash" -ForegroundColor Green
+                }
+            }
+            catch {
+            }
+        }
+
+    if (-not $Found) {
+        Write-Host "..." -ForegroundColor Red
+    }
+}
